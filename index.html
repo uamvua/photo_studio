@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Фотостудия</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <form name="form" class="form">
+            <div class="form__title">Печать фотографий</div>
+            <div class="form__data">
+                <div class="form__left form__column">
+                    <fieldset class="fieldset__style">
+                        <legend>Формат</legend>
+                        <ul class="radio__list">
+                            <li class="radio__item">
+                                <label class="radio__item-label">
+                                    <input type="radio" value="radio1" name="size" checked>
+                                    <div class="radio__text">9x12</div>
+                                </label>
+                            </li>
+                            <li class="radio__item">
+                                <label class="radio__item-label">
+                                    <input type="radio" value="radio2" name="size">
+                                    <div class="radio__text">10x15</div>
+                                </label>
+                            </li>
+                            <li class="radio__item">
+                                <label class="radio__item-label">
+                                    <input type="radio" value="radio3" name="size">
+                                    <div class="radio__text">18x24</div>
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <div class="photo__count">
+                        <div class="photo__count-text">Количество</div>
+                        <input type="text" name="count" class="photo__count-input" onkeypress = "isNumber(event)">
+                    </div>
+                </div>
+                <div class="form__right form__column">
+                    <fieldset class="fieldset__style">
+                        <legend>Бумага</legend>
+                        <ul class="radio__list">
+                            <li class="radio__item">
+                                <label class="radio__item-label">
+                                    <input type="radio" name="paper" value="matt" checked>
+                                    <div class="radio__text">Матовая</div>
+                                </label>
+                            </li>
+                            <li class="radio__item">
+                                <label class="radio__item-label">
+                                    <input type="radio" name="paper" value="glossy">
+                                    <div class="radio__text">Глянцевая</div>
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <div class="button__block">
+                        <button class="button" name="calculate">
+                            Вычислить
+                        </button>
+                        <button type="reset" class="button" name="reset">
+                            Очистить
+                        </button>
+                    </div>                   
+                </div>
+            </div>
+            <div class="result">
+                <div class="result__row">Цена фотографии: <span id="price">0</span> р.</div>
+                <div class="result__row">Количество <span id="countOut">0</span> шт</div>
+                <div class="result__row">Сумма заказа <span id="sumOut">0</span> р.</div>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
