@@ -1,2 +1,2 @@
 # photo_studio
-https://uamvua.github.io/photo_studio/
+https://vsbogatyr.github.io/photo_studio/
